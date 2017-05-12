@@ -1,12 +1,24 @@
-*.class
+# gitignore Documentation - http://git-scm.com/docs/gitignore
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Log
+**/logs/
 
-# Package Files #
-*.jar
-*.war
-*.ear
+# TestNG
+test-output/
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Gradle
+.gradle/
+
+# Maven
+**/target/
+
+.clover/
+
+# IDEA
+.idea/
+*.iml
+
+# Eclipse
+.settings/
+.classpath
+.project
