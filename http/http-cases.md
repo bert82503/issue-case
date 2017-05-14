@@ -8,5 +8,9 @@
 
 ##### ProtocolException: The server failed to respond with a valid HTTP response
 * [HttpClient问题：The server failed to respond with a valid HTTP response](http://blog.csdn.net/cctt_1/article/details/9021543)
- * 根本原因是：使用同一个HttpClient长连接/保持连接，然后又使用这个httpClient进行其他网络请求。
+ * 根本原因：使用同一个HttpClient长连接/保持连接，然后又使用这个httpClient进行其他网络请求。
+
+##### CloseableHttpResponse not close or HttpMethod not releaseConnection
+* [HttpClient 卡死 response 为 null](http://blog.csdn.net/cctt_1/article/details/8166067)
+ * 根本原因：TCP连接忘记关闭了。
 
