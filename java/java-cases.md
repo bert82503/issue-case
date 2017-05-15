@@ -1,4 +1,10 @@
-### Java线上Cases
+### Java问题Cases
+
+#### ThreadPool
+##### ThreadPoolExecutor使用不当容易踩到的“坑”
+* [Java中容易踩到的“坑”系列之线程池篇 – hellojavacases - 毕玄 - 林昊](http://hellojava.info/?p=13)
+ * 对各种BlockingQueue(阻塞队列)理解不深刻（SynchronousQueue、LinkedTransferQueue、LinkedBlockingDeque、LinkedBlockingQueue、ArrayBlockingQueue、DelayQueue）
+
 
 #### Memory
 ##### OOM-OutOfMemoryError: unable to create new native thread
