@@ -1102,7 +1102,7 @@ gmt_create, gmt_modified 的类型均为 date_time 类型。
 ### 四、工程结构
 #### (一) `应用分层`
 1. 【`推荐`】图中默认上层依赖于下层，箭头关系表示可直接依赖，如：开放接口层可以依赖于 Web 层，也可以直接依赖于 Service 层，依此类推：  
-![应用分层](/Users/dannong/Documents/workspace/GitHub/issue-case/编码规范/应用分层.jpg)
+![应用分层](./应用分层.jpg)
 
  * **开放接口**层：可直接**封装 Service 方法**暴露成 _RPC 接口_；通过 **Web** 封装成 _HTTP 接口_；进行**网关安全控制、流量控制**等。
  * 终端显示层：各个端的模板渲染并执行显示的层。当前主要是 velocity 渲染，JS 渲染， 移动端展示等。
