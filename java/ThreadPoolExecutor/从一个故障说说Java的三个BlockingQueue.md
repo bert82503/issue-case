@@ -95,20 +95,20 @@ public class ThreadPoolExecutor extends AbstractExecutorService {
          * and so reject the task.
          */
         int c = ctl.get();
-        if (workerCountOf(c) < corePoolSize) { // 未超过核心线程池大小，新建线程
-            if (addWorker(command, true))
+        if (workerCountOf(c) < corePoolSize) {
+            if (addWorker(command, true)) // 1. 未超过核心线程池大小，新建线程
                 return;
             c = ctl.get();
         }
-        if (isRunning(c) && workQueue.offer(command)) { // 超过核心线程池大小，任务进入队列
+        if (isRunning(c) && workQueue.offer(command)) { // 2. 超过核心线程池大小，任务进入队列
             int recheck = ctl.get();
             if (! isRunning(recheck) && remove(command))
                 reject(command);
             else if (workerCountOf(recheck) == 0)
                 addWorker(null, false);
         }
-        else if (!addWorker(command, false)) // 队列满了，新建线程
-            reject(command);
+        else if (!addWorker(command, false)) // 3. 当队列满了，再新建线程
+            reject(command); // 超过最大线程池大小，则拒绝执行
     }
 
 }

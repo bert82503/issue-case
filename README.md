@@ -3,5 +3,5 @@
 希望：前车之鉴，后车之师。
 
 
-特别感谢阿里@林昊(毕玄)的 [hellojavacases](http://hellojava.info/)！
+特别感谢阿里@bluedavy-林昊(毕玄)的 [hellojavacases](http://hellojava.info/)！
 
