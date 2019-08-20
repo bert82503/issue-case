@@ -7,6 +7,11 @@
 最近因为**Kafka集群**要接入新的topic，所以简单看看各种压力情况，发现`ZooKeeper占用IO过高`。
 
 `iostat`如下图：
+```
+iostat -c -d -h -t -x -y 3
+iostat -c -d -h -t -x -y -k 3
+iostat -c -d -h -t -x -y -m 3
+```
 
 ![iostat](images/1.iostat.png)
 
